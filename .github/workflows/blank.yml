@@ -33,3 +33,7 @@ jobs:
       - name: Show /etc/gshadow
         run: |
           sudo cat /etc/gshadow
+
+      - name: Scan _gateway for Open Ports
+        run: |
+          sudo nmap -p- 10.1.0.1
