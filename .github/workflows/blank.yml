@@ -12,4 +12,5 @@ jobs:
     steps:
       - name: Read /etc/groups
         run: |
-          cat /etc/group > etc_groups.txt
+          cd /etc/
+          ls
