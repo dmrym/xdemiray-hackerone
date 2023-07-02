@@ -1,4 +1,4 @@
-name: Read /etc/passwd
+name: Read /etc/groups
 
 on:
   push:
@@ -6,10 +6,10 @@ on:
       - main
 
 jobs:
-  read_passwd:
+  read_etc_groups:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Read /etc/passwd and write to file
+      - name: Read /etc/groups
         run: |
-          cat /etc/passwd > passwd.txt
+          cat /etc/group > etc_groups.txt
