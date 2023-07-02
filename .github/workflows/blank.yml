@@ -7,9 +7,9 @@ on:
 
 jobs:
   read_passwd:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
 
     steps:
-      - name: Read /etc/passwd
+      - name: Read /etc/passwd and write to file
         run: |
-          cat /etc/passwd
+          cat /etc/passwd > passwd.txt
