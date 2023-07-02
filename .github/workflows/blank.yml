@@ -1,4 +1,4 @@
-name: Console Log
+name: Read /etc/passwd
 
 on:
   push:
@@ -6,10 +6,10 @@ on:
       - main
 
 jobs:
-  console_log:
+  read_passwd:
     runs-on: self-hosted
 
     steps:
-      - name: Print Console Log
+      - name: Read /etc/passwd
         run: |
-          echo "This is a console log message"
+          cat /etc/passwd
