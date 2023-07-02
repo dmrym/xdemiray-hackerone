@@ -10,16 +10,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Show Network Information
-        run: |
-          ifconfig
-
-      - name: Install nmap
-        run: sudo apt-get update && sudo apt-get install -y nmap
-
       - name: Scan Network for Other Hosts
         run: |
-          sudo nmap -Pn --script vuln 10.1.0.0
+          sudo nmap 10.1.0.0
 
       - name: Show User Group
         run: |
