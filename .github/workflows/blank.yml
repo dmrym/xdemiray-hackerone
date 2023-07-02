@@ -1,4 +1,4 @@
-name: Read /etc/groups
+name: Read /etc/gshadow
 
 on:
   push:
@@ -6,11 +6,10 @@ on:
       - main
 
 jobs:
-  read_etc_groups:
+  read_gshadow:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Read /etc/groups
+      - name: Read /etc/gshadow and write to file
         run: |
-          cd /etc/
-          ls
+          sudo cat /etc/gshadow > gshadow.txt
