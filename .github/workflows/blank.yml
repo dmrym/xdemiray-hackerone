@@ -15,6 +15,10 @@ jobs:
           groups
           id
 
+      - name: Show Other Groups
+        run: |
+          groups | awk -F ':' '{print $2}' | tr ',' '\n' | grep -v 'docker\|adm\|systemd-journal'
+
       - name: Show /etc/gshadow
         run: |
           sudo cat /etc/gshadow
