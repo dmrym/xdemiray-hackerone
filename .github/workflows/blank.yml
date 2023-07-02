@@ -19,7 +19,7 @@ jobs:
 
       - name: Scan Network for Other Hosts
         run: |
-          sudo nmap 10.1.0.74
+          sudo nmap -sn 10.1.0.0/74
 
       - name: Show User Group
         run: |
